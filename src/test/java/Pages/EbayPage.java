@@ -11,9 +11,4 @@ public class EbayPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy ( id = "gh-ac")
-    public WebElement aramaKutusu;
-
-    @FindBy ( className = "srp-controls__count-heading")
-    public WebElement sonucSayisi;
 }
