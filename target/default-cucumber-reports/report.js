@@ -1,65 +1,30 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Ebay.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Us001.feature");
 formatter.feature({
-  "name": "Ebayda Arama",
+  "name": "Glb Trader Sign In ve join now sayfalarinin test edilmesi",
   "description": "",
-  "keyword": "Feature"
-});
-formatter.scenarioOutline({
-  "name": "TC06_kullanici ebayda urun arar",
-  "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Feature",
   "tags": [
     {
-      "name": "@ebayarama"
-    }
-  ]
-});
-formatter.step({
-  "name": "kullanici \"http://ebay.com\" sayfasina gider",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "kullanici ebayda aramakutusuna \"\u003curunler\u003e\" yazar",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "kullanici ebaydaki sonuc sayisini ekrana yazar",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "Test Verileri",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "urunler"
-      ]
+      "name": "@glbtrsignup"
     },
     {
-      "cells": [
-        "araba"
-      ]
-    },
-    {
-      "cells": [
-        "bebek arabası"
-      ]
-    },
-    {
-      "cells": [
-        "bisiklet"
-      ]
+      "name": "@glbtrsignin"
     }
   ]
 });
 formatter.scenario({
-  "name": "TC06_kullanici ebayda urun arar",
+  "name": "TC_0015_Şifre Min 5 karekter olmalı",
   "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
-      "name": "@ebayarama"
+      "name": "@glbtrsignup"
+    },
+    {
+      "name": "@glbtrsignin"
+    },
+    {
+      "name": "@glbtrsignup15"
     }
   ]
 });
@@ -67,134 +32,88 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici \"http://ebay.com\" sayfasina gider",
+  "name": "kullanici glbtrader singup \"https://www.glbtrader.com/register.html\" sayfasina gider",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Stepdefinitions.Ebay.kullanici_sayfasina_gider(java.lang.String)"
+  "location": "Stepdefinitions.Us001StepDefinition.kullanici_glbtrader_singup_sayfasina_gider(java.lang.String)"
 });
 formatter.result({
-  "error_message": "io.cucumber.core.exception.CucumberException: Failed to instantiate class Stepdefinitions.Ebay\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.cacheNewInstance(ObjectFactoryServiceLoader.java:135)\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.getInstance(ObjectFactoryServiceLoader.java:121)\r\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)\r\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\r\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:67)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)\r\nCaused by: java.lang.reflect.InvocationTargetException\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.cacheNewInstance(ObjectFactoryServiceLoader.java:129)\r\n\t... 33 more\r\nCaused by: java.lang.NullPointerException\r\n\tat Utilities.Driver.getDriver(Driver.java:29)\r\n\tat Pages.EbayPage.\u003cinit\u003e(EbayPage.java:11)\r\n\tat Stepdefinitions.Ebay.\u003cinit\u003e(Ebay.java:10)\r\n\t... 38 more\r\n",
-  "status": "failed"
-});
-formatter.step({
-  "name": "kullanici ebayda aramakutusuna \"araba\" yazar",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Stepdefinitions.Ebay.kullanici_ebayda_aramakutusuna_yazar(java.lang.String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "kullanici ebaydaki sonuc sayisini ekrana yazar",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Stepdefinitions.Ebay.kullanici_ebaydaki_sonuc_sayisini_ekrana_yazar()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.after({
-  "error_message": "java.lang.NullPointerException\r\n\tat Utilities.Driver.getDriver(Driver.java:29)\r\n\tat Stepdefinitions.Hooks.tearDown(Hooks.java:24)\r\n",
-  "status": "failed"
-});
-formatter.scenario({
-  "name": "TC06_kullanici ebayda urun arar",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@ebayarama"
-    }
-  ]
-});
-formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici \"http://ebay.com\" sayfasina gider",
+  "name": "kullanici singupemailkutusuna \"rebecamerkel@gmail.com\" degerini girer",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Stepdefinitions.Ebay.kullanici_sayfasina_gider(java.lang.String)"
+  "location": "Stepdefinitions.Us001StepDefinition.kullanici_singupemailkutusuna_degerini_girer(java.lang.String)"
 });
 formatter.result({
-  "error_message": "io.cucumber.core.exception.CucumberException: Failed to instantiate class Stepdefinitions.Ebay\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.cacheNewInstance(ObjectFactoryServiceLoader.java:135)\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.getInstance(ObjectFactoryServiceLoader.java:121)\r\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)\r\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\r\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:67)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)\r\nCaused by: java.lang.reflect.InvocationTargetException\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.cacheNewInstance(ObjectFactoryServiceLoader.java:129)\r\n\t... 33 more\r\nCaused by: java.lang.NullPointerException\r\n\tat Utilities.Driver.getDriver(Driver.java:29)\r\n\tat Pages.EbayPage.\u003cinit\u003e(EbayPage.java:11)\r\n\tat Stepdefinitions.Ebay.\u003cinit\u003e(Ebay.java:10)\r\n\t... 38 more\r\n",
-  "status": "failed"
-});
-formatter.step({
-  "name": "kullanici ebayda aramakutusuna \"bebek arabası\" yazar",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Stepdefinitions.Ebay.kullanici_ebayda_aramakutusuna_yazar(java.lang.String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "kullanici ebaydaki sonuc sayisini ekrana yazar",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Stepdefinitions.Ebay.kullanici_ebaydaki_sonuc_sayisini_ekrana_yazar()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.after({
-  "error_message": "java.lang.NullPointerException\r\n\tat Utilities.Driver.getDriver(Driver.java:29)\r\n\tat Stepdefinitions.Hooks.tearDown(Hooks.java:24)\r\n",
-  "status": "failed"
-});
-formatter.scenario({
-  "name": "TC06_kullanici ebayda urun arar",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@ebayarama"
-    }
-  ]
-});
-formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici \"http://ebay.com\" sayfasina gider",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "Stepdefinitions.Ebay.kullanici_sayfasina_gider(java.lang.String)"
-});
-formatter.result({
-  "error_message": "io.cucumber.core.exception.CucumberException: Failed to instantiate class Stepdefinitions.Ebay\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.cacheNewInstance(ObjectFactoryServiceLoader.java:135)\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.getInstance(ObjectFactoryServiceLoader.java:121)\r\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)\r\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\r\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:67)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)\r\nCaused by: java.lang.reflect.InvocationTargetException\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.cacheNewInstance(ObjectFactoryServiceLoader.java:129)\r\n\t... 33 more\r\nCaused by: java.lang.NullPointerException\r\n\tat Utilities.Driver.getDriver(Driver.java:29)\r\n\tat Pages.EbayPage.\u003cinit\u003e(EbayPage.java:11)\r\n\tat Stepdefinitions.Ebay.\u003cinit\u003e(Ebay.java:10)\r\n\t... 38 more\r\n",
-  "status": "failed"
-});
-formatter.step({
-  "name": "kullanici ebayda aramakutusuna \"bisiklet\" yazar",
+  "name": "kullanici singupnamekutusuna \"rebeca merkel\" degerini girer",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Stepdefinitions.Ebay.kullanici_ebayda_aramakutusuna_yazar(java.lang.String)"
+  "location": "Stepdefinitions.Us001StepDefinition.kullanici_singupnamekutusuna_degerini_girer(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "kullanici ebaydaki sonuc sayisini ekrana yazar",
+  "name": "kullanici singupmobilekutusuna \"852146389\" degerini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Stepdefinitions.Us001StepDefinition.kullanici_singupmobilekutusuna_degerini_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici singuppasswordkutusuna \"1234\" degerini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Stepdefinitions.Us001StepDefinition.kullanici_singuppasswordkutusuna_degerini_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici singupconfirmpasswordkutusuna \"1234\" degerini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Stepdefinitions.Us001StepDefinition.kullanici_singupconfirmpasswordkutusuna_degerini_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici singup butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Stepdefinitions.Us001StepDefinition.kullanici_singup_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hatali kayit islemini assert eder",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Stepdefinitions.Ebay.kullanici_ebaydaki_sonuc_sayisini_ekrana_yazar()"
+  "location": "Stepdefinitions.Us001StepDefinition.kullanici_hatali_kayit_islemini_assert_eder()"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.after({
-  "error_message": "java.lang.NullPointerException\r\n\tat Utilities.Driver.getDriver(Driver.java:29)\r\n\tat Stepdefinitions.Hooks.tearDown(Hooks.java:24)\r\n",
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat Stepdefinitions.Us001StepDefinition.kullanici_hatali_kayit_islemini_assert_eder(Us001StepDefinition.java:70)\r\n\tat ✽.kullanici hatali kayit islemini assert eder(file:///C:/Users/Abdullah/IdeaProjects/GLTT5/src/test/resources/features/Us001.feature:167)\r\n",
   "status": "failed"
+});
+formatter.embedding("image/png", "embedded0.png", null);
+formatter.after({
+  "status": "passed"
 });
 });

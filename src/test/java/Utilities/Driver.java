@@ -20,7 +20,7 @@ public class Driver {
     // Programın herhangi bir yerinden getDriver() methodu çağırılarak
     // hafıza STATIC olarak oluşturulmuş DRIVER nesnesine erişebiliriz.
     // Yani yeniden WebDriver nesnesi oluşturmak zorunda değiliz.
-    //Driver.getDriver()
+
     public static WebDriver getDriver(){
         // Eğer driver nesnesi hafızada boşsa, oluşturulmamışsa yeniden oluşturmana gerek yok.
         // Eğer null ise, yeniden oluşturabilirsin.
@@ -29,7 +29,7 @@ public class Driver {
             switch (ConfigurationReader.getProperty("browser")){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                   driver = new ChromeDriver();
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
